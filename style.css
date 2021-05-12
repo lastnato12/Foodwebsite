@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    color: #07ed44;
+}
+nav{
+    display: grid;
+    place-items: center;
+    background-color: #05f745;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul a{
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s;
+    font-size: 18px;
+}
+
+nav ul a:hover{
+    background-color: green;
+    color: white;
+}
+
+.menus{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.menu img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2 ease;
+}
+
+.menu img:hover{
+    transform:scale(1.04);
+}
+
+.menu h4{
+    padding: 5px;
+    text-align: center;
+}
+
+.menu button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+}
+
+.menu button:hover{
+transform: scale(1.08);
+}
+
+@media screen and (max-width:1000px){
+    .menus{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px){
+    .menus{
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
+
